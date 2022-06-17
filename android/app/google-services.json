@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "32556402140",
+    "project_id": "mynotes-vee",
+    "storage_bucket": "mynotes-vee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32556402140:android:c63b92cc4e4c1ba39e3b19",
+        "android_client_info": {
+          "package_name": "com.diety.mynotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32556402140-7i6kib2nmtp5tim99n1q645035m65idg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2HGLv_H88fA7b46BwuBxGLoQaFQJ-tuo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "32556402140-7i6kib2nmtp5tim99n1q645035m65idg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
