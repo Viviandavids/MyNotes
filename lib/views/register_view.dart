@@ -69,8 +69,7 @@ class _RegisterViewState extends State<RegisterView> {
                 if (e.code == 'weak-password') {
                   devtools.log('weak password');
                 } else if (e.code == 'email-already-in-use') {
-                  devtools
-                      .log('This email is already in use by another account');
+                  devtools.log('This email is already in use');
                 } else if (e.code == 'invalid-email') {
                   devtools.log('invalid email entered');
                 }
