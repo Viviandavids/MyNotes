@@ -345,7 +345,7 @@ const createUserTable = '''CREATE TABLE IF NOT EXISTS "user" (
 const createNoteTable = '''CREATE TABLE IF NOT EXISTS "note" (
 	      "user_id"	INTEGER NOT NULL,
 	      "id"	INTEGER NOT NULL,
-	      "test"	TEXT,
+	      "text"	TEXT NOT NULL,
 	      "is_synced_with_cloud"	INTEGER NOT NULL DEFAULT 0,
 	       FOREIGN KEY("user_id") REFERENCES "user"("id")
          PRIMARY KEY("id" AUTOINCREMENT)
