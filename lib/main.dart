@@ -112,11 +112,19 @@ class _HomePageState extends State<HomePage> {
                 Row(
                   children: [
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        context
+                            .read<CounterBloc>()
+                            .add(DecrementEvent(_controller.text));
+                      },
                       child: const Text('-'),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        context
+                            .read<CounterBloc>()
+                            .add(IncrementEvent(_controller.text));
+                      },
                       child: const Text('+'),
                     ),
                   ],
