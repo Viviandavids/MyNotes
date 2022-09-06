@@ -1,0 +1,62 @@
+{
+
+    "logout_button": "Se déconnecter",
+    "note": "Noter",
+    "cancel": "Annuler",
+    "yes": "Oui",
+    "delete": "Effacer",
+    "sharing": "Partage",
+    "ok": "D'ACCORD",
+    "login": "Connexion",
+    "verify_email": "Vérifier les courriels",
+    "register": "S'inscrire",
+    "restart": "Redémarrer",
+
+    "start_typing_your_note": "Commencez à taper votre note",
+    "delete_note_prompt": "Voulez-vous vraiment supprimer cette note ?",
+    "cannot_share_empty_note_prompt": "Impossible de partager une note vide !",
+    "generic_error_prompt": "Une erreur s'est produite",
+    "logout_dialog_prompt": "Êtes-vous sûr de vouloir vous déconnecter?",
+
+    "password_reset": "Réinitialisation du mot de passe",
+    "password_reset_dialog_prompt": "Nous vous avons envoyé un lien de réinitialisation de mot de passe. S'il vous plaît vérifier votre e-mail pour plus d'informations.",
+
+    "login_error_cannot_find_user": "Impossible de trouver un utilisateur avec les informations d'identification saisies !",
+    "login_error_wrong_credentials": "Informations d'identification erronées",
+    "login_error_auth_error": "Erreur d'authentification",
+
+    "login_view_prompt": "Veuillez vous connecter à votre compte afin d'interagir et de créer des notes !",
+    
+    "login_view_forgot_password": "j'ai oublié mon mot de passe",
+    "login_view_not_registered_yet": "Pas encore inscrit? Inscrivez-vous ici!",
+
+    "email_text_field_placeholder": "Entrez votre email ici",
+    "password_text_field_placeholder": "Entrez votre mot de passe ici",
+    
+    "forgot_password": "Mot de passe oublié",
+    "forgot_password_view_generic_error": "Nous n'avons pas pu traiter votre demande. Veuillez vous assurer que vous êtes un utilisateur enregistré, ou si ce n'est pas le cas, enregistrez un utilisateur maintenant en revenant une étape en arrière.",
+    "forgot_password_view_prompt": "Si vous avez oublié votre mot de passe, entrez simplement votre email et nous vous enverrons un lien de réinitialisation de mot de passe.",
+    "forgot_password_view_send_me_link": "Envoyez-moi le lien de réinitialisation du mot de passe",
+    "forgot_password_view_back_to_login": "Retour à la page de connexion",
+
+    "register_error_weak_password": "Ce mot de passe n'est pas suffisamment sécurisé. Veuillez choisir un autre mot de passe !",
+    "register_error_email_already_in_use": "Cet e-mail est déjà enregistré pour un autre utilisateur. Veuillez choisir un autre e-mail !",
+    "register_error_generic": "Échec de l'inscription. Veuillez réessayer plus tard!",
+    "register_error_invalid_email": "L'adresse e-mail que vous avez saisie semble invalide. Veuillez essayer une autre adresse e-mail !",
+    "register_view_prompt": "Entrez votre e-mail et votre mot de passe pour voir vos notes !",
+    "register_view_already_registered": "Déjà enregistré? Connectez-vous ici!",
+
+    "verify_email_view_prompt": "Nous vous avons envoyé un e-mail de vérification. Veuillez l'ouvrir pour vérifier votre compte. Si vous n'avez pas encore reçu d'e-mail de vérification, appuyez sur le bouton ci-dessous !",
+    "verify_email_send_email_verification": "Envoyer la vérification par e-mail",
+
+    "notes_title": "{count, plural, =0{Pas encore de notes} =1{1 note} other{{count} notes}}",
+    "@notes_title": {
+        "placeholders": {
+            "count": {
+                "type": "entier",
+                "example": "3 billets"
+            }
+        }
+    }
+
+}
