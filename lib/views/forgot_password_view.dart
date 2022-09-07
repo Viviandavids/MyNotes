@@ -67,21 +67,51 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
                     hintText: context.loc.verify_email,
                   ),
                 ),
-                TextButton(
-                  onPressed: () {
-                    final email = _controller.text;
-                    context
-                        .read<AuthBloc>()
-                        .add(AuthEventForgotPassword(email: email));
-                  },
-                  child: Text(context.loc.forgot_password_view_send_me_link),
+                Container(
+                  margin: const EdgeInsets.only(
+                    top: 20.0,
+                    bottom: 10.0,
+                  ),
+                  child: TextButton(
+                    onPressed: () {
+                      final email = _controller.text;
+                      context
+                          .read<AuthBloc>()
+                          .add(AuthEventForgotPassword(email: email));
+                    },
+                    child: Text(context.loc.forgot_password_view_send_me_link),
+                    style: TextButton.styleFrom(
+                      primary: Colors.white,
+                      backgroundColor: Colors.green,
+                      side: const BorderSide(color: Colors.white, width: 1),
+                      elevation: 5,
+                      minimumSize: const Size(100, 50),
+                      shadowColor: Colors.red,
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 5, horizontal: 20),
+                    ),
+                  ),
                 ),
-                TextButton(
-                  onPressed: () {
-                    context.read<AuthBloc>().add(const AuthEventLogOut());
-                  },
-                  child: Text(
-                    context.loc.forgot_password_view_back_to_login,
+                Container(
+                  margin: const EdgeInsets.only(
+                    top: 20.0,
+                    bottom: 10.0,
+                  ),
+                  child: TextButton(
+                    onPressed: () {
+                      context.read<AuthBloc>().add(const AuthEventLogOut());
+                    },
+                    child: Text(context.loc.forgot_password_view_back_to_login),
+                    style: TextButton.styleFrom(
+                      primary: Colors.white,
+                      backgroundColor: Colors.green,
+                      side: const BorderSide(color: Colors.white, width: 1),
+                      elevation: 5,
+                      minimumSize: const Size(100, 50),
+                      shadowColor: Colors.red,
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 5, horizontal: 20),
+                    ),
                   ),
                 )
               ],

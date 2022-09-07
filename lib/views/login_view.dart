@@ -85,34 +85,77 @@ class _LoginViewState extends State<LoginView> {
                     hintText: context.loc.password_text_field_placeholder,
                   ),
                 ),
-                TextButton(
-                  onPressed: () async {
-                    final email = _email.text;
-                    final password = _password.text;
-                    context.read<AuthBloc>().add(
-                          AuthEventLogin(
-                            email,
-                            password,
-                          ),
-                        );
-                  },
-                  child: Text(context.loc.login),
+                Container(
+                  margin: const EdgeInsets.only(top: 20.0, bottom: 10.0),
+                  child: TextButton(
+                    onPressed: () async {
+                      final email = _email.text;
+                      final password = _password.text;
+                      context.read<AuthBloc>().add(
+                            AuthEventLogin(
+                              email,
+                              password,
+                            ),
+                          );
+                    },
+                    child: Text(context.loc.login),
+                    style: TextButton.styleFrom(
+                      primary: Colors.white,
+                      backgroundColor: Colors.green,
+                      side: const BorderSide(color: Colors.white, width: 1),
+                      elevation: 5,
+                      minimumSize: const Size(100, 50),
+                      shadowColor: Colors.red,
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 5, horizontal: 20),
+                    ),
+                  ),
                 ),
-                TextButton(
-                  onPressed: () {
-                    context.read<AuthBloc>().add(
-                          const AuthEventForgotPassword(),
-                        );
-                  },
-                  child: Text(context.loc.login_view_forgot_password),
+                Container(
+                  margin: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+                  child: TextButton(
+                    onPressed: () {
+                      context.read<AuthBloc>().add(
+                            const AuthEventForgotPassword(),
+                          );
+                    },
+                    child: Text(context.loc.login_view_forgot_password),
+                    style: TextButton.styleFrom(
+                      primary: Colors.white,
+                      backgroundColor: Colors.green,
+                      side: const BorderSide(color: Colors.white, width: 1),
+                      elevation: 5,
+                      minimumSize: const Size(100, 50),
+                      shadowColor: Colors.red,
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 5,
+                        horizontal: 20,
+                      ),
+                    ),
+                  ),
                 ),
-                TextButton(
-                  onPressed: (() {
-                    context.read<AuthBloc>().add(
-                          const AuthEventShouldRegister(),
-                        );
-                  }),
-                  child: Text(context.loc.login_view_not_registered_yet),
+                Container(
+                  margin: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+                  child: TextButton(
+                    onPressed: (() {
+                      context.read<AuthBloc>().add(
+                            const AuthEventShouldRegister(),
+                          );
+                    }),
+                    child: Text(context.loc.login_view_not_registered_yet),
+                    style: TextButton.styleFrom(
+                      primary: Colors.white,
+                      backgroundColor: Colors.green,
+                      side: const BorderSide(color: Colors.white, width: 1),
+                      elevation: 5,
+                      minimumSize: const Size(100, 50),
+                      shadowColor: Colors.red,
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 5,
+                        horizontal: 20,
+                      ),
+                    ),
+                  ),
                 )
               ],
             ),

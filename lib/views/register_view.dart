@@ -93,27 +93,58 @@ class _RegisterViewState extends State<RegisterView> {
                 Center(
                   child: Column(
                     children: [
-                      TextButton(
-                        onPressed: () {
-                          final email = _email.text;
-                          final password = _password.text;
-                          context.read<AuthBloc>().add(
-                                AuthEventRegister(
-                                  email,
-                                  password,
-                                ),
-                              );
-                        },
-                        child: Text(context.loc.register),
+                      Container(
+                        margin: const EdgeInsets.only(
+                          top: 20.0,
+                          bottom: 10.0,
+                        ),
+                        child: TextButton(
+                          onPressed: () {
+                            final email = _email.text;
+                            final password = _password.text;
+                            context.read<AuthBloc>().add(
+                                  AuthEventRegister(
+                                    email,
+                                    password,
+                                  ),
+                                );
+                          },
+                          child: Text(context.loc.register),
+                          style: TextButton.styleFrom(
+                            primary: Colors.white,
+                            backgroundColor: Colors.green,
+                            side:
+                                const BorderSide(color: Colors.white, width: 1),
+                            elevation: 5,
+                            minimumSize: const Size(100, 50),
+                            shadowColor: Colors.red,
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 5, horizontal: 20),
+                          ),
+                        ),
                       ),
-                      TextButton(
-                        onPressed: (() {
-                          context.read<AuthBloc>().add(
-                                const AuthEventLogOut(),
-                              );
-                        }),
-                        child:
-                            Text(context.loc.register_view_already_registered),
+                      Container(
+                        margin: const EdgeInsets.only(top: 20.0, bottom: 10.0),
+                        child: TextButton(
+                          onPressed: (() {
+                            context.read<AuthBloc>().add(
+                                  const AuthEventLogOut(),
+                                );
+                          }),
+                          child: Text(
+                              context.loc.register_view_already_registered),
+                          style: TextButton.styleFrom(
+                            primary: Colors.white,
+                            backgroundColor: Colors.green,
+                            side:
+                                const BorderSide(color: Colors.white, width: 1),
+                            elevation: 5,
+                            minimumSize: const Size(100, 50),
+                            shadowColor: Colors.red,
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 5, horizontal: 20),
+                          ),
+                        ),
                       )
                     ],
                   ),

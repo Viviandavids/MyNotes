@@ -27,21 +27,47 @@ class _VerifyEmailViewState extends State<VerifyEmailView> {
                 context.loc.verify_email_view_prompt,
               ),
             ),
-            TextButton(
-              onPressed: () async {
-                context.read<AuthBloc>().add(
-                      const AuthEventSendEmailVerification(),
-                    );
-              },
-              child: Text(context.loc.verify_email_send_email_verification),
+            Container(
+              margin: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+              child: TextButton(
+                onPressed: () async {
+                  context.read<AuthBloc>().add(
+                        const AuthEventSendEmailVerification(),
+                      );
+                },
+                child: Text(context.loc.verify_email_send_email_verification),
+                style: TextButton.styleFrom(
+                  primary: Colors.white,
+                  backgroundColor: Colors.green,
+                  side: const BorderSide(color: Colors.white, width: 1),
+                  elevation: 5,
+                  minimumSize: const Size(100, 50),
+                  shadowColor: Colors.red,
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                ),
+              ),
             ),
-            TextButton(
-              onPressed: () {
-                context.read<AuthBloc>().add(
-                      const AuthEventLogOut(),
-                    );
-              },
-              child: Text(context.loc.restart),
+            Container(
+              margin: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+              child: TextButton(
+                onPressed: () {
+                  context.read<AuthBloc>().add(
+                        const AuthEventLogOut(),
+                      );
+                },
+                child: Text(context.loc.restart),
+                style: TextButton.styleFrom(
+                  primary: Colors.white,
+                  backgroundColor: Colors.green,
+                  side: const BorderSide(color: Colors.white, width: 1),
+                  elevation: 5,
+                  minimumSize: const Size(100, 50),
+                  shadowColor: Colors.red,
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                ),
+              ),
             )
           ],
         ),
